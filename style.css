@@ -106,7 +106,7 @@ h1 {
     background-size: inherit;
     border-radius: 0.75em;
     border: 0.2em solid #fbfff4e3;
-    animation: bar-slide 1s cubic-bezier(0.23, 0.48, 0.51, 0.21);
+    animation: bar-slide 2s cubic-bezier(0.23, 0.48, 0.51, 0.21);
     animation-fill-mode: forwards;
     z-index: 100;
     transition: 100ms;
