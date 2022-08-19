@@ -95,11 +95,20 @@ h1 {
 }
 .bar {
     height: 3vh;
-    width: 100%;
+    width: 0%;
     background: linear-gradient(90deg, rgb(13, 182, 212), rgb(153, 189, 85), #ffee00);
     background-size: inherit;
     border-radius: 0.75em;
     border: 0.2em solid #fbfff4e3;
+    animation: bar-slide 1s cubic-bezier(0.23, 0.48, 0.51, 0.21);
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes bar-slide {
+    100%  {
+        width: 100%;
+    }
 }
 
 .btn {
