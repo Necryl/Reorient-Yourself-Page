@@ -93,16 +93,27 @@ h1 {
     background-size: 100vw;
     
 }
+
+:root {
+    --barFirstCol: rgb(13, 182, 212);
+    --barSecondCol: rgb(153, 189, 85);
+}
+
 .bar {
     height: 3vh;
     width: 0%;
-    background: linear-gradient(90deg, rgb(13, 182, 212), rgb(153, 189, 85), #ffee00);
+    background: linear-gradient(90deg, var(--barFirstCol), var(--barSecondCol), #ffee00);
     background-size: inherit;
     border-radius: 0.75em;
     border: 0.2em solid #fbfff4e3;
     animation: bar-slide 1s cubic-bezier(0.23, 0.48, 0.51, 0.21);
     animation-fill-mode: forwards;
+    z-index: 100;
+    transition: 100ms;
+}
 
+.bar:hover {
+    scale: 103%;
 }
 
 @keyframes bar-slide {
@@ -111,9 +122,18 @@ h1 {
     }
 }
 
+.btn-container {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .btn {
     margin: 0%;
-    margin-top: 1em;
+    margin-top: 1vh;
     padding: 0.15em 0.75em;
     font-family: 'Roboto Slab';
     font-size: 2em;
@@ -121,10 +141,26 @@ h1 {
     border: 0.1em solid rgb(236, 226, 164);
     color: #455e1fe3;
     background-color: #f0e550e3;
+    animation: btn-intro 300ms ease-in-out;
+    /* animation-fill-mode: forwards; */
+
+    transition: 200ms;
 }
 .btn:hover {
     scale: 105%;
 }
 .btn:active {
     scale: 98%;
+}
+
+@keyframes btn-intro {
+    0% {
+        scale: 90%;
+    }
+    60% {
+        scale: 110%;
+    }
+    100% {
+        scale: 100%;
+    }
 }
